@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       chrome.storage.local.set({ enabled: newState });
       
       chrome.action.setIcon({
-        path: newState ? "icon.png" : "icon-open.svg"
+        path: newState ? "icon.png" : "icon-open.png"
       });
 
       sendResponse({ enabled: newState });
