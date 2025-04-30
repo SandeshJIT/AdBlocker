@@ -1,0 +1,22 @@
+iframe[src*="ads"],
+iframe[src*="doubleclick"],
+iframe[src*="googlesyndication"],
+iframe[src*="adservice"],
+iframe[src*="adserver"],
+div[id^="ad-"],
+div[class*="ad-"],
+div[class*="ads"],
+div[class*="sponsor"],
+div[class*="sponsored"],
+div[class*="promoted"],
+div[class*="banner"],
+div[id*="google_ads"],
+div[class*="adsbygoogle"],
+section[class*="ads"],
+[id*="sponsored"],
+[data-testid*="placementTracking"],
+[data-ad],
+[data-ad-client],
+[class*="advertisement"] {
+    display: none !important;
+}

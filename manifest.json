@@ -1,24 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "DOM Ad Blocker",
-    "version": "1.0",
-    "description": "Removes ads by manipulating the DOM.",
-    "permissions": ["scripting"],
-    "host_permissions": ["<all_urls>"],
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "run_at": "document_idle"
-      }
-    ],
-    "action": {
-      "default_icon": "icon.png",
-      "default_title": "Ad Blocker Active"
-    },
-    "icons": {
-      "48": "icon.png",
-      "128": "icon.png"
-    }
-  }
-  
+  "manifest_version": 3,
+  "name": "Robust Ad Blocker",
+  "version": "2.2",
+  "permissions": ["scripting", "storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "css": ["adblocker.css"],
+    "run_at": "document_start"
+  }]
+}
